@@ -4,7 +4,6 @@ using System.Text;
 
 namespace GruppInlUpp2kelett
 {
-
     public class Position
     {
             public Position(int x, int y)
@@ -18,14 +17,13 @@ namespace GruppInlUpp2kelett
     abstract class GameObject
     {
         public static Position pos = new Position(50 / 2, 20 / 2);
+        public static List<Position> SnakeObject = new List<Position>();
 
         char Appearance = '#';
 
         void Update()
         {
-
         }
-
         // TODO
     }
 

@@ -7,6 +7,11 @@ ConsoleKey ReadKeyIfExists() => Console.KeyAvailable ? Console.ReadKey(intercept
 
 
 // TODO Presentera eventuellt någon info eller meny här
+Console.WriteLine("Press 'Enter' To Start!");
+while (!(ReadKeyIfExists() == ConsoleKey.Enter))
+{
+    Thread.Sleep(50);
+}
 
 // Initialisera spelet
 const int frameRate = 5;
