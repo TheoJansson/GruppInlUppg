@@ -6,18 +6,16 @@ using GruppInlUpp2kelett;
 ConsoleKey ReadKeyIfExists() => Console.KeyAvailable ? Console.ReadKey(intercept: true).Key : ConsoleKey.NoName;
 
 
-// TODO Presentera eventuellt någon info eller meny här
-Console.WriteLine("Press 'Enter' To Start!");
-while (!(ReadKeyIfExists() == ConsoleKey.Enter))
-{
-    Thread.Sleep(50);
-}
-
 // Initialisera spelet
 const int frameRate = 5;
 GameWorld world = new GameWorld();
 ConsoleRenderer renderer = new ConsoleRenderer(world);
 
+Console.WriteLine("Press 'Enter' To Start!");
+while (!(ReadKeyIfExists() == ConsoleKey.Enter))
+{
+    Thread.Sleep(50);
+}
 
 // TODO Skapa spelare och andra objekt etc. genom korrekta anrop till vår GameWorld-instans
 // ...
